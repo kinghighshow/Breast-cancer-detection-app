@@ -122,7 +122,7 @@ def user_input_features():
     }
     
     # Display radio buttons using custom names
-    selected_display_name = st.radio(
+    selected_display_name = st.selectbox(
         'Select the Nature of Aspirate',
         list(aspirate_options.keys())
     )
