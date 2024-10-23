@@ -2,4 +2,4 @@ streamlit
 matplotlib
 tensorflow
 pillow
-sklearn
+scikit-learn
