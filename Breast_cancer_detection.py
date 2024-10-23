@@ -107,11 +107,33 @@ def user_input_features():
 
     
     
-    Nature_of_Aspirate = st.checkbox('Nature of Aspirate', 
-                                       ["colloid_Aspirate", "creamy_Aspirate", "hemorrhagic_Aspirate", 
-                                        "milky_Aspirate", "mucoid_Aspirate", "oily_Aspirate", 
-                                        "proteinaceous_Aspirate", "sanguineous_Aspirate", 
-                                        "serous_Aspirate", "turbid_Aspirate"])
+    # Define a dictionary mapping custom display names to values
+    aspirate_options = {
+        "Colloid Aspirate": "colloid_Aspirate",
+        "Creamy Aspirate": "creamy_Aspirate",
+        "Hemorrhagic Aspirate": "hemorrhagic_Aspirate",
+        "Milky Aspirate": "milky_Aspirate",
+        "Mucoid Aspirate": "mucoid_Aspirate",
+        "Oily Aspirate": "oily_Aspirate",
+        "Proteinaceous Aspirate": "proteinaceous_Aspirate",
+        "Sanguineous Aspirate": "sanguineous_Aspirate",
+        "Serous Aspirate": "serous_Aspirate",
+        "Turbid Aspirate": "turbid_Aspirate"
+    }
+    
+    # Display radio buttons using custom names
+    selected_display_name = st.radio(
+        'Select the Nature of Aspirate',
+        list(aspirate_options.keys())
+    )
+    
+    # Get the actual value from the dictionary
+    Nature_of_Aspirate = aspirate_options[selected_display_name]
+    
+    # Display the selected value (optional)
+    st.write(f"You selected: {Nature_of_Aspirate}")
+
+
     
     data = {
         'Age': Age,
