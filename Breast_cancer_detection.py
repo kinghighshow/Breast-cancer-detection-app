@@ -107,7 +107,7 @@ def user_input_features():
 
     
     
-    Nature_of_Aspirate = st.selectbox('Nature of Aspirate', 
+    Nature_of_Aspirate = st.checkbox('Nature of Aspirate', 
                                        ["colloid_Aspirate", "creamy_Aspirate", "hemorrhagic_Aspirate", 
                                         "milky_Aspirate", "mucoid_Aspirate", "oily_Aspirate", 
                                         "proteinaceous_Aspirate", "sanguineous_Aspirate", 
