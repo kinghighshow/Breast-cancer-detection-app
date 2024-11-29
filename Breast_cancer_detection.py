@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import f1_score, accuracy_score
 
 # Load the dataset
-df = pd.read_csv("Downloads/Breast cancer dataset cleaned.csv")
+df = pd.read_csv("Breast cancer dataset cleaned.csv")
 
 # Assuming 'Diagnosis' column contains the labels for whether a person has breast cancer or not
 X = df.drop(columns=['Diagnosis'])  # Features
@@ -59,7 +59,7 @@ print(f"Test Accuracy: {test_accuracy:.2f}")
 print(f"Test F1 Score: {test_f1:.2f}")
 
 # Streamlit App
-st.image("Downloads/logo.png", use_column_width=True)
+st.image("logo.png", use_column_width=True)
 
 st.title("BreastGuard: Machine Learning-Based Breast Cancer Prediction System")
 st.write("Please Input Corresponding Patient Data")
